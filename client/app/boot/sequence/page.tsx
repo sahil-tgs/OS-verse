@@ -17,7 +17,7 @@ export default function BootSequence() {
   const router = useRouter()
 
   useEffect(() => {
-    let timeouts: NodeJS.Timeout[] = []
+    const timeouts: NodeJS.Timeout[] = []
     let currentDelay = 0
 
     bootMessages.forEach((message, index) => {

@@ -1,3 +1,4 @@
+// client/app/boot/select/page.tsx
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -80,9 +81,9 @@ export default function OSSelector() {
     }
   }, [shouldBoot, router])
 
-  const handleBoot = (osId: string) => {
-    setShouldBoot(osId)
-  }
+  // const handleBoot = (osId: string) => {
+  //   setShouldBoot(osId)
+  // }
 
   return (
     <motion.div 

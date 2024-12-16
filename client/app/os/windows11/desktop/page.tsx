@@ -1,4 +1,3 @@
-// app/os/windows11/desktop/page.tsx
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -97,10 +96,12 @@ export default function Windows11Desktop() {
         {/* This PC */}
         <div className="w-20 text-center group cursor-pointer select-none">
           <div className="flex flex-col items-center p-2 rounded-sm hover:bg-white/10 transition-colors">
-            <img
+            <Image
               src={ICONS.THIS_PC}
               alt="This PC"
-              className="w-10 h-10 mb-1"
+              width={40}
+              height={40}
+              className="mb-1"
             />
             <span className="text-white text-sm mt-1 drop-shadow-md">This PC</span>
           </div>
@@ -109,10 +110,12 @@ export default function Windows11Desktop() {
         {/* Recycle Bin */}
         <div className="w-20 text-center group cursor-pointer select-none">
           <div className="flex flex-col items-center p-2 rounded-sm hover:bg-white/10 transition-colors">
-            <img
+            <Image
               src={ICONS.RECYCLE_BIN}
               alt="Recycle Bin"
-              className="w-10 h-10 mb-1"
+              width={40}
+              height={40}
+              className="mb-1"
             />
             <span className="text-white text-sm mt-1 drop-shadow-md">Recycle Bin</span>
           </div>
@@ -121,10 +124,12 @@ export default function Windows11Desktop() {
         {/* Edge */}
         <div className="w-20 text-center group cursor-pointer select-none">
           <div className="flex flex-col items-center p-2 rounded-sm hover:bg-white/10 transition-colors">
-            <img
+            <Image
               src={ICONS.EDGE}
               alt="Microsoft Edge"
-              className="w-10 h-10 mb-1"
+              width={40}
+              height={40}
+              className="mb-1"
             />
             <span className="text-white text-sm mt-1 drop-shadow-md">Edge</span>
           </div>
@@ -166,10 +171,11 @@ export default function Windows11Desktop() {
           </button>
 
           <button className="p-2 hover:bg-white/10 rounded-sm transition-colors">
-            <img
+            <Image
               src={ICONS.EDGE}
               alt="Edge"
-              className="w-6 h-6"
+              width={24}
+              height={24}
             />
           </button>
         </div>
