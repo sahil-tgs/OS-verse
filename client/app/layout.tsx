@@ -1,4 +1,3 @@
-// app/layout.tsx
 'use client'
 
 import { useEffect } from 'react'
@@ -18,12 +17,15 @@ export default function RootLayout({
 
     if (!isLandingPage) {
       const handleBeforeUnload = (e: BeforeUnloadEvent) => {
-        // Only if it's a tab close, not a refresh
-        if (!e.currentTarget.performance.navigation.type) {
-          const randomMessage = EXIT_MESSAGES[Math.floor(Math.random() * EXIT_MESSAGES.length)]
-          // Show browser alert
-          alert(randomMessage)
-        }
+        // Get a random exit message
+        const randomMessage = EXIT_MESSAGES[Math.floor(Math.random() * EXIT_MESSAGES.length)]
+        
+        // Standard way to handle beforeunload
+        e.preventDefault()
+        // Chrome requires returnValue to be set
+        e.returnValue = randomMessage
+        
+        return randomMessage // For older browsers
       }
 
       window.addEventListener('beforeunload', handleBeforeUnload)
