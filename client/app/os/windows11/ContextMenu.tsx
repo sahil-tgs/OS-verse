@@ -1,7 +1,6 @@
-// app/os/windows11/ContextMenu.tsx
 'use client'
 
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { 
   Grid, 
@@ -27,7 +26,7 @@ interface ContextMenuProps {
 }
 
 interface MenuItem {
-  icon: JSX.Element
+  icon: React.ReactNode
   label: string
   shortcut?: string
   hasSubmenu?: boolean
@@ -78,8 +77,7 @@ export default function ContextMenu({ position, onClose, onRefresh }: ContextMen
         style={{
           top: position.y,
           left: position.x,
-          translateX: '-50%',
-          translateY: '-50%'
+          transform: 'translate(-50%, -50%)'
         }}
         onClick={(e) => e.stopPropagation()}
       >
