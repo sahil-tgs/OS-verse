@@ -1,14 +1,17 @@
-/** @type {import('next').NextConfig} */
+// next.config.ts
 const nextConfig = {
+  typescript: {
+    // During initial development with stricter rules, you might want
+    // to temporarily set this to true
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    // Same here - set to false to enforce better code quality
+    ignoreDuringBuilds: false,
+  },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'img.icons8.com',
-        pathname: '/**',
-      },
-    ],
+    domains: ['img.icons8.com'],
   },
 }
 
-module.exports = nextConfig
+export default nextConfig
