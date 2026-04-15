@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve", // Keeping preserve for Next.js
+    "jsx": "react-jsx", // Keeping preserve for Next.js
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -41,7 +41,8 @@
     "components",
     "lib",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

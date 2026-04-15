@@ -1,6 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --animate-windowsFade: windowsFade 2s ease-in-out infinite;
+
+  @keyframes windowsFade {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+}
 
 :root {
   --background: #ffffff;
